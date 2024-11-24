@@ -6,6 +6,47 @@
     </head>
     <body>
         <h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+        <h2>Saving Balance</h2>
+        <form th:action="@{/account/savings-balance}" method="post">
+            <div>
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" id="accountNumber" name="accountNumber" required>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <br/>
+        <h2>Checking Balance</h2>
+        <form th:action="@{/account/checking-balance}" method="post">
+            <div>
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" id="accountNumber" name="accountNumber" required>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <br/>
+        <h2>Transaction Statement</h2>
+        <form th:action="@{/account/transaction-statement}" method="post">
+            <div>
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" id="accountNumber" name="accountNumber" required>
+            </div>
+            <div>
+                <label for="fromDate">From Date:</label>
+                <input type="text" id="fromDate" name="fromDate" required>
+            </div>
+            <div>
+                <label for="toDate">To Date:</label>
+                <input type="text" id="toDate" name="toDate" required>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <br/>
         <form th:action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>

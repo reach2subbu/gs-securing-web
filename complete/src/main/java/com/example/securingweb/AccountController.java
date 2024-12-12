@@ -19,7 +19,7 @@ public class AccountController {
     }
 
     @PostMapping("/transaction-statement")
-    public String getTransactionStatement(@RequestParam String accountNumber, @RequestParam String fromDate, @RequestParam String toDate, Model model) {
+    public String getTransactionStatement(@RequestParam String accountNumber, @RequestParam(required = false) String fromDate, @RequestParam (required = false) String toDate, Model model) {
         // Logic to retrieve transaction statement
         String statement = "Transaction statement for account " + accountNumber + " from " + fromDate + " to " + toDate + " is ... Nothing";
         model.addAttribute("statement", statement);

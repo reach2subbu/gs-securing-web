@@ -17,7 +17,7 @@
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
               <span class="navbar-brand mb-0 h1">Welcome <span th:remove="tag" sec:authentication="name">thymeleaf</span></span>
-              
+              <span><a th:href="@{/hello}">Home</a></span>
             </div>
         </nav>
         <div class="accordion" id="accordionExample">

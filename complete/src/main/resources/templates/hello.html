@@ -17,6 +17,7 @@
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
               <span class="navbar-brand mb-0 h1">Welcome <span th:remove="tag" sec:authentication="name">thymeleaf</span></span>
+              <form action="/logout" method="post"> <button class="btn btn-danger mb-3" type="submit">Logout</button> </form>
             </div>
         </nav>
         <div class="accordion" id="accordionExample">

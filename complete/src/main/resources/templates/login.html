@@ -14,11 +14,11 @@
           }
         </style>
       </head>
-    <body>
+    <body >
         <div th:if="${param.error}" class="alert alert-danger" role="alert">
             Invalid username and password.
         </div>
-        <div th:if="${param.logout}" class="alert alert-info" role="alert">
+        <div th:if="${param.logout}" class="alert alert-success" role="alert">
             You have been logged out.
         </div>
         <!--

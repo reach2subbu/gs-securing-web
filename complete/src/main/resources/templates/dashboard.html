@@ -31,7 +31,7 @@
                 <div class="accordion-body">
                     <form th:action="@{/account/checking-balance}" method="post">
                     <label for="accountNumber" class="form-label">Account Number</label>
-                    <input type="input" id="accountNumber" name="accountNumber" class="form-control" aria-describedby="accountHelpBlock1">
+                    <input type="input" id="accountNumber" name="accountNumber" class="form-control" aria-describedby="accountHelpBlock1" required minlength="6">
                     <div id="accountHelpBlock1" class="form-text">
                       Your account number is 15 digit number given in the bottom of the checkbook
                     </div>
@@ -53,7 +53,7 @@
                 <div class="accordion-body">
                     <form th:action="@{/account/savings-balance}" method="post">
                         <label for="accountNumber" class="form-label">Account Number</label>
-                        <input type="input" id="accountNumber" name="accountNumber" class="form-control" aria-describedby="accountHelpBlock1">
+                        <input type="input" id="accountNumber" name="accountNumber" class="form-control" aria-describedby="accountHelpBlock1" required minlength="6">
                         <div id="accountHelpBlock1" class="form-text">
                           Your account number is 15 digit number given in the bottom of the checkbook
                         </div>
@@ -75,7 +75,7 @@
                 <div class="accordion-body">
                     <form th:action="@{/account/transaction-statement}" method="post">
                         <label for="accountNumber" class="form-label">Account Number</label>
-                        <input type="input" id="accountNumber" name="accountNumber" class="form-control" aria-describedby="accountHelpBlock1">
+                        <input type="input" id="accountNumber" name="accountNumber" class="form-control" aria-describedby="accountHelpBlock1" required minlength="6">
                         <div id="accountHelpBlock1" class="form-text">
                           Your account number is 15 digit number given in the bottom of the checkbook
                         </div>

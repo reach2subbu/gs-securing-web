@@ -23,6 +23,7 @@ public class AccountController {
         // Logic to retrieve transaction statement
         String statement = "Transaction statement for account " + accountNumber + " is ... Nothing";
         model.addAttribute("statement", statement);
+        model.addAttribute("transactions", MockTransactionGenerator.generateMockTransactions(10));
         return "transactionstatement";
     }
 

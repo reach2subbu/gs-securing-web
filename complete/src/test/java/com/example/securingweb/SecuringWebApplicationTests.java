@@ -52,7 +52,7 @@ public class SecuringWebApplicationTests {
 
 	@Test
 	public void accessSecuredResourceUnauthenticatedThenRedirectsToLogin() throws Exception {
-		mockMvc.perform(get("/hello"))
+		mockMvc.perform(get("/dashboard"))
 			.andExpect(status().is3xxRedirection())
 			.andExpect(redirectedUrlPattern("**/login"));
 	}
@@ -60,10 +60,10 @@ public class SecuringWebApplicationTests {
 	@Test
 	@WithMockUser
 	public void accessSecuredResourceAuthenticatedThenOk() throws Exception {
-		MvcResult mvcResult = mockMvc.perform(get("/hello"))
+		MvcResult mvcResult = mockMvc.perform(get("/dashboard"))
 				.andExpect(status().isOk())
 				.andReturn();
 
-		assertThat(mvcResult.getResponse().getContentAsString()).contains("Hello user!");
+		assertThat(mvcResult.getResponse().getContentAsString()).contains("dashboard user!");
 	}
 }

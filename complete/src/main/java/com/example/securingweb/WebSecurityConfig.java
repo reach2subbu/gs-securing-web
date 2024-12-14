@@ -24,8 +24,8 @@ public class WebSecurityConfig {
 			)
 			.formLogin((form) -> form
 				.loginPage("/login")
-				// .successForwardUrl("/hello")
-				.defaultSuccessUrl("/hello")
+				// .successForwardUrl("/dashboard")
+				.defaultSuccessUrl("/dashboard")
 				.permitAll()
 			)
 			.logout((logout) -> logout.permitAll().logoutUrl("/logout").logoutSuccessUrl("/login?logout"));
